@@ -2,14 +2,14 @@
 
 ; Output stream of bits, and add the CLK and LRCLK signals
 .side_set 2
-             set  x,   15         side 0
-             jmp  dropin          side 0
+;             set  x,   14         side 1
+             jmp  dropin           side 1
 .wrap_target
 
 left_start:  out pins, 1          side 0 
-             set x,    14         side 1
+dropin:      set x,    14         side 1
 left_loop:   out pins, 1          side 0 
-dropin:      jmp x--   left_loop  side 1
+             jmp x--   left_loop  side 1
 
 right_start: out pins, 1          side 2
              set x,    14         side 3

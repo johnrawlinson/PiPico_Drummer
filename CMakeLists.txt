@@ -17,6 +17,7 @@ target_link_libraries(drummer
         hardware_dma
         hardware_irq
         hardware_pio
+        hardware_i2c
         )
 
 # create map/bin/hex file etc.
